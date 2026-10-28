@@ -218,3 +218,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local and generated project files
+.DS_Store
+*.zip
+outputs/*_KSHAP_IMPUTE_*/
