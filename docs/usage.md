@@ -1,11 +1,5 @@
 # Usage
 
-## System requirements
-
-Use Python 3.10 or later. Image registration and repeated radiomic feature extraction can be computationally expensive; runtime increases with the number of tumour patches and SHAP samples.
-
-The included NIfTI images and models are stored with Git LFS.
-
 ## Installation
 
 Clone the repository, create an isolated environment, and install the Python dependencies:
