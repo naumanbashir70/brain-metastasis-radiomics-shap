@@ -56,3 +56,9 @@ Setup instructions, the example command, input requirements, and output descript
 ## Models and features
 
 Five outer-fold SVM models are provided with their ordered input metadata. Each model uses 186 radiomic features: 93 from T2-FLAIR and 93 from post-contrast T1-weighted MRI.
+
+## Citation
+
+If you use this code or the provided models, please cite:
+
+> Heyn, C., et al. (2026). *Explainable Artificial Intelligence Using Cooperative Game Theory Reveals Tumour Composition in Treated Brain Metastases*.
