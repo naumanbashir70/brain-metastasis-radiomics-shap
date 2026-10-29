@@ -1,3 +1,10 @@
+# Copyright (c) 2026 Sunnybrook Research Institute and Radogen Inc.
+# SPDX-License-Identifier: CC-BY-NC-ND-4.0
+# Licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives
+# 4.0 International License. See the LICENSE file in this repository.
+# This software and framework are the subject of a pending patent application(s).
+# No patent rights are granted. Commercial licensing enquiries: info@radogen.com
+
 """
 Patch-wise Kernel SHAP analysis for a radiomics SVM.
 
