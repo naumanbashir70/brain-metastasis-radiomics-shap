@@ -31,11 +31,11 @@ outputs/SVM_t2_t1/feature_columns[t2+t1_seed=42_outer=<fold>].json
 
 Feature columns may also be supplied as CSV, and the script recognizes compatible fold-specific `test_predictions` CSV files. The feature metadata must describe the exact ordered inputs used to train the serialized model.
 
-The model files are present in this repository. The feature-column files are currently absent and must be restored before running the example.
+The model and feature-column files for all five outer folds are included in this repository.
 
 ## Example command
 
-Run the command from the repository root after restoring the feature-column file for fold 5:
+Run the command from the repository root:
 
 ```bash
 python src/run_patchwise_kernel_shap.py \

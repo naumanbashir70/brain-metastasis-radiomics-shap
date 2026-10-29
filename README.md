@@ -58,7 +58,7 @@ Setup instructions, the example command, input requirements, and output descript
 
 ## Reproducibility note
 
-The current repository includes five trained SVM models but does not include the corresponding feature-column metadata required by the analysis script. For each fold, the script expects a matching `feature_columns` JSON/CSV file or a compatible `test_predictions` CSV file in `outputs/SVM_t2_t1/`. These files must be restored from the model-training analysis before the example can run end to end. No substitute feature order should be inferred, because the trained pipeline depends on the original column order.
+The repository includes five trained SVM models and their corresponding ordered feature-column metadata. The feature order was recovered from the original 89-case training feature table and contains the 93 T2-FLAIR and 93 T1 post-contrast radiomic features described in the manuscript.
 
 ## Data and model storage
 
