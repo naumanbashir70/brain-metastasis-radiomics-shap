@@ -2,7 +2,7 @@
 
 ## Objective
 
-The analysis explains an SVM prediction for one recipient tumour in spatial terms. A three-dimensional tumour patch is treated as a SHAP feature. Instead of replacing an absent feature with a constant value, the method replaces that patch with anatomy from a registered donor case.
+The analysis explains an SVM prediction for one recipient tumour in spatial terms. A three-dimensional tumour patch is treated as a SHAP feature. Instead of replacing an absent feature with a constant value, the method uses the corresponding registered MRI and mask patch from a donor case.
 
 ## Inputs
 
@@ -21,7 +21,7 @@ Each donor tumour mask is rigidly registered to the recipient mask. Registration
 For each coalition evaluated by Kernel SHAP, every patch is assigned one of two states:
 
 - retain the recipient image and mask values; or
-- replace them with values from one registered donor.
+- replace them with the corresponding registered donor image and mask values.
 
 The spatial arrangement of patches is therefore preserved. Registration quality is summarized by the Dice coefficient between the recipient mask and each transformed donor mask.
 
@@ -48,4 +48,3 @@ Each run creates a uniquely named directory under `outputs/` containing:
 - `shap_summary.json`, containing parameters, paths, registration scores, prediction summaries, attribution values, and runtimes.
 
 These maps preserve the recipient NIfTI affine and header. They should be interpreted with the corresponding patch-index image and the analysis settings recorded in the JSON file.
-

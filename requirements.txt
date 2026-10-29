@@ -2,8 +2,7 @@ joblib
 nibabel
 numpy
 pandas
-PyRadiomics
-scikit-learn
+PyRadiomics==3.0.1
+scikit-learn==1.7.0
 shap
 SimpleITK
-

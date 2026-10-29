@@ -4,7 +4,7 @@
 
 Use Python 3.10 or later. Image registration and repeated radiomic feature extraction can be computationally expensive; runtime increases with the number of tumour patches and SHAP samples.
 
-Git LFS is required when cloning or publishing the included NIfTI images and model files.
+The included NIfTI images and models are stored with Git LFS.
 
 ## Installation
 
@@ -15,10 +15,11 @@ git lfs install
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+python -m pip install numpy
+python -m pip install --no-build-isolation -r requirements.txt
 ```
 
-The dependency file records direct packages used by the script. For exact reproduction of manuscript results, use the package versions from the original analysis environment if they are available.
+The saved models require scikit-learn 1.7.0.
 
 ## Required model artifacts
 
@@ -28,8 +29,6 @@ The script searches for two fold-specific artifacts:
 outputs/SVM_t2_t1/models/svm_model[t2+t1_seed=42_outer=<fold>].joblib
 outputs/SVM_t2_t1/feature_columns[t2+t1_seed=42_outer=<fold>].json
 ```
-
-Feature columns may also be supplied as CSV, and the script recognizes compatible fold-specific `test_predictions` CSV files. The feature metadata must describe the exact ordered inputs used to train the serialized model.
 
 The model and feature-column files for all five outer folds are included in this repository.
 
@@ -92,4 +91,4 @@ The `shap_summary.json` file is the primary machine-readable record. It includes
 
 Place all three subject files in `data/images/` using the established naming convention. Confirm that the two MRI volumes and mask have matching dimensions and physical geometry. The new case may then be supplied as a recipient or donor identifier.
 
-Do not use clinical identifiers in file names or NIfTI headers. Public release should follow the relevant ethics approval, consent conditions, and institutional data-sharing policy.
+Input files must not contain clinical identifiers in file names or NIfTI headers.
