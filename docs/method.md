@@ -2,7 +2,7 @@
 
 ## Objective
 
-The analysis explains an SVM prediction for one recipient tumour in spatial terms. A three-dimensional tumour patch is treated as a SHAP feature. Instead of replacing an absent feature with a constant value, the method uses the corresponding registered MRI and mask patch from a donor case.
+The analysis explains an SVM prediction for a selected tumour by assigning spatial importance to its three-dimensional image patches. Each patch is treated as a SHAP feature. Instead of replacing an absent feature with a constant value, the method uses the corresponding registered MRI and mask patch from a donor case.
 
 ## Inputs
 

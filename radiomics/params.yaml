@@ -1,5 +1,4 @@
-# PyRadiomics parameter file
-# Matches init_extractor() hardcoded params in extract_features_v1.py
+# PyRadiomics parameters
 
 setting:
   binWidth: 0.5
