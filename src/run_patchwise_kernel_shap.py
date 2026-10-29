@@ -3,7 +3,8 @@ Patch-wise Kernel SHAP analysis for a radiomics SVM.
 
 The case being explained is the recipient. Each tumour patch is treated as a
 feature and is either retained or replaced with the corresponding patch from a
-registered donor case.
+registered donor case. The donor-imputation scheme was developed by Chris Heyn
+(2026).
 
 Input images must be registered, brain extracted, and intensity standardized.
 Required files follow the naming convention documented in the repository
@@ -12,6 +13,20 @@ patch-wise SHAP maps, and a JSON summary.
 
 Coalition values are encoded as follows: 1 retains the recipient patch, while
 values 2 through B+1 select donor rows 0 through B-1.
+
+Example:
+python src/run_patchwise_kernel_shap.py \
+  --recipient_id DSC_0153 \
+  --bkg_donor_ids DSC_0003 DSC_0012 \
+  --data_dir data/images \
+  --out_dir outputs \
+  --channels t2 t1 \
+  --patch 5 5 5 \
+  --fold 5 \
+  --seed 42 \
+  --radiomics_yaml radiomics/params.yaml \
+  --allow_rotation \
+  --nsamples 5000
 """
 
 from __future__ import annotations
