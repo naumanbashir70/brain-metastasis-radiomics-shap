@@ -51,7 +51,7 @@ python src/run_patchwise_kernel_shap.py \
   --nsamples 5000
 ```
 
-For a short validation run, reduce `--nsamples`; this changes the approximation and is not equivalent to the manuscript analysis.
+For a short validation run, reduce `--nsamples`; this changes the approximation and is not equivalent to the full analysis.
 
 ## Command-line arguments
 
